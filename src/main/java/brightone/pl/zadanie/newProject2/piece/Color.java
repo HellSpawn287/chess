@@ -1,4 +1,4 @@
-package brightone.pl.zadanie.newProject2;
+package brightone.pl.zadanie.newProject2.piece;
 
 public enum Color {
     White("b"),

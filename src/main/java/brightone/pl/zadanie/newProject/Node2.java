@@ -1,3 +1,4 @@
+/*
 package brightone.pl.zadanie.newProject;
 
 public class Node2 {
@@ -9,14 +10,14 @@ public class Node2 {
         int[] coordinates = new int[2];
 
         board.printTable();
-        figure.move(1, white.allFigures[10].x, white.allFigures[10].y);
-        figure.move(1, white.allFigures[10].x, white.allFigures[10].y);
-        figure.move(1, white.allFigures[10].x, white.allFigures[10].y);
-        figure.move(1, white.allFigures[10].x, white.allFigures[10].y);
+        board.move(figure, 1, white.allFigures[10].x, white.allFigures[10].y);
+        board.move(figure,1,  white.allFigures[10].x, white.allFigures[10].y);
+        board.move(figure,1,  white.allFigures[10].x, white.allFigures[10].y);
+        board.move(figure,1, white.allFigures[10].x, white.allFigures[10].y);
 
         //figure.move(white.allFigures[10], 1, white.allFigures[10].x, white.allFigures[10].y);
         board.printTable();
-        figure.atack(Board.getTable(), black,1);
+        board.atack(figure, black,1);
         board.printTable();
 
         for (int i = 0; i <16 ; i++) {
@@ -28,3 +29,4 @@ public class Node2 {
 
     }
 }
+*/

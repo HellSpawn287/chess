@@ -1,3 +1,4 @@
+/*
 package brightone.pl.zadanie.newProject;
 
 public class Figure {
@@ -14,7 +15,13 @@ public class Figure {
         this.x = x;
         this.y = y;
         available = true;
+    }
 
+    boolean positionValidation(int figureID, int x, int y) {
+        if (isAvailable(figureID)) {
+            if (x >= 0 && x <= 7 && y >= 0 && y <= 7) return true;// Żle! nie powinniśmy dać możliwość stworzenia bierki na pozycji 2,17
+        }
+        return false;
     }
 
     boolean positionValidation(int figureID, int x, int y) {
@@ -45,8 +52,8 @@ public class Figure {
         return false;
     }
 
-    void move(int playerID, int figureID, this.x, this.y) {
-        if (moveValidation(figureID, this.x, this.y)) {
+    void move(int playerID, int figureID, int toX, int toY) {
+        if (moveValidation(figureID, toX, toY)) {
             Spot[][] table = Board.getTable();
             if (playerID == 1) {
                 this.y += 1;
@@ -60,16 +67,16 @@ public class Figure {
         }
     }
 
-    boolean atackLeftValidation(Figure figure, int playerID) {
-        if (figure.positionValidation(figure, figure.x, figure.y) == true) {
+    boolean atackLeftValidation(int playerID, int toX, int toY) {
+        if (positionValidation(figureID, toX, toY) == true) {
             Spot[][] table = Board.getTable();
             if (playerID == 1) {
-                if (table[figure.x - 1][figure.y + 1].spotID == 2) {
+                if (table[x - 1][y + 1].spotID == 2) {
                     return true;
                 } else
                     return false;
             } else if (playerID == 2) {
-                if (table[figure.x + 1][figure.y - 1].spotID == 2) {
+                if (table[x + 1][y - 1].spotID == 2) {
                     return true;
                 } else
                     return false;
@@ -78,16 +85,16 @@ public class Figure {
         return false;
     }
 
-    boolean atackRightValidation(Figure figure, int playerID) {
-        if (figure.positionValidation(figure, figure.x, figure.y) == true) {
+    boolean atackRightValidation(int playerID, int toX, int toY) {
+        if (positionValidation(figureID, toX, toY) == true) {
             Spot[][] table = Board.getTable();
             if (playerID == 1) {
-                if (table[figure.x + 1][figure.y + 1].spotID == 2) {
+                if (table[x + 1][y + 1].spotID == 2) {
                     return true;
                 } else
                     return false;
             } else if (playerID == 2) {
-                if (table[figure.x - 1][figure.y - 1].spotID == 1) {
+                if (table[x - 1][y - 1].spotID == 1) {
                     return true;
                 } else
                     return false;
@@ -96,7 +103,7 @@ public class Figure {
         return false;
     }
 
-    int[] atack(Figure figure, Player player, int playerID) {
+    int[] atack(Player player, int playerID) {
         int[] temp = new int[2];
         Spot[][] table = Board.getTable();
         if (playerID == 1) {
@@ -133,6 +140,7 @@ public class Figure {
         return temp;
     }
 
+
     public int getX() {
         return x;
     }
@@ -165,3 +173,4 @@ public class Figure {
         this.available = available;
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package brightone.pl.zadanie.newProject;
 
 public class Player {
@@ -53,3 +54,4 @@ public class Player {
         this.allFigures = allFigures;
     }
 }
+*/

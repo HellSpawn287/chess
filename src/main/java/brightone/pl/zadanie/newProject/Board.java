@@ -1,3 +1,4 @@
+/*
 package brightone.pl.zadanie.newProject;
 
 public class Board {
@@ -38,7 +39,7 @@ public class Board {
         System.out.println("");
     }
 
-    /*boolean moveValidation(Figure figure, int playerID) {
+    boolean moveValidation(Figure figure, int playerID) {
         if (figure.positionValidation(figure, figure.x, figure.y) == true) {
             if (playerID == 1) {
                 if (table[figure.x][figure.y + 1].spotID == 0) {
@@ -138,5 +139,6 @@ public class Board {
             temp[1] = figure.y;
         }player.updateAllFigures(player, temp);
         return temp;
-    }*/
+    }
 }
+*/
