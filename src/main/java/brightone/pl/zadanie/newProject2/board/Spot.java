@@ -25,4 +25,5 @@ public class Spot {
     public Type getContent() {
         return content;
     }
+
 }
