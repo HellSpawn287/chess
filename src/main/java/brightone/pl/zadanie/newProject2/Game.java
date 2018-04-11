@@ -1,11 +1,14 @@
 package brightone.pl.zadanie.newProject2;
 
 import brightone.pl.zadanie.newProject2.board.Board;
+import brightone.pl.zadanie.newProject2.board.Spot;
 import brightone.pl.zadanie.newProject2.piece.Color;
 import brightone.pl.zadanie.newProject2.piece.Piece;
 
 import java.util.List;
 import java.util.Objects;
+
+import static brightone.pl.zadanie.newProject2.board.Board.getTable;
 
 public class Game {
     private Board board;
@@ -14,23 +17,22 @@ public class Game {
     private List<Piece> blackPieces;
     private List<Piece> whitePieces;
 
-    public Game(Board board, List<Piece> blackPieces, List<Piece> whitePieces, Player black, Player white) {
-        this.board = board;
+    public Game() {
         this.black = new Player(Color.Black);
         this.white = new Player(Color.White);
         this.blackPieces = this.black.getPieces();
         this.whitePieces = this.white.getPieces();
     }
 
-    public Board getActualBoard() {
-        return board;
+    public Spot[][] getActualBoard(Game game) {
+        return getTable(game);
     }
 
     public void setActualBoard(Board board) {
         this.board = board;
     }
 
-    public Player getBlack() {
+    private Player getBlack() {
         return black;
     }
 
@@ -38,7 +40,7 @@ public class Game {
         this.black = black;
     }
 
-    public Player getWhite() {
+    private Player getWhite() {
         return white;
     }
 
@@ -78,4 +80,5 @@ public class Game {
     public int hashCode() {
         return Objects.hash(board, getBlack(), getWhite(), getBlackPieces(), getWhitePieces());
     }
+
 }

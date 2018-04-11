@@ -12,6 +12,11 @@ public abstract class Piece {
         checkingLocalisation(x, y);
     }
 
+    Piece() {
+        this.type = Type.Empty;
+        this.color = Color.None;
+    }
+
     private void checkingLocalisation(int x, int y) {
         if (x >= 0 && x <= 7 && y >= 0 && y <= 7) {
             this.x = x;

@@ -7,7 +7,8 @@ public class Spot {
     private Piece piece;
     private Type content;
 
-    Spot() {
+    Spot(Piece piece) {
+        this.piece = piece;
         if (piece != null) this.content = piece.getType();
         else {
             this.content = Type.Empty;
@@ -22,8 +23,7 @@ public class Spot {
         this.piece = piece;
     }
 
-    public Type getContent() {
+    Type getContent() {
         return content;
     }
-
 }

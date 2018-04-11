@@ -2,16 +2,21 @@ package brightone.pl.zadanie.newProject2.piece;
 
 public enum Color {
     White("b"),
-    Black("c");
+    Black("c"),
+    None("-");
 
-    private final String symbol;
+    private final String symbolColor;
 
-    Color(String symbol) {
-        this.symbol = symbol;
+    Color(String symbolColor) {
+        this.symbolColor = symbolColor;
+    }
+
+    public String getSymbolColor() {
+        return symbolColor;
     }
 
     @Override
     public String toString() {
-        return symbol;
+        return symbolColor;
     }
 }
