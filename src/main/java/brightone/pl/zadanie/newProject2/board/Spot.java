@@ -5,13 +5,13 @@ import brightone.pl.zadanie.newProject2.piece.Type;
 
 public class Spot {
     private Piece piece;
-    private Type content;
+    private String content;
 
     Spot(Piece piece) {
         this.piece = piece;
-        if (piece != null) this.content = piece.getType();
+        if (piece != null) this.content = piece.getType().getSymbolType() + piece.getColor().getSymbolColor();
         else {
-            this.content = Type.Empty;
+            this.content = Type.Empty.getSymbolType();
         }
     }
 
@@ -23,7 +23,7 @@ public class Spot {
         this.piece = piece;
     }
 
-    Type getContent() {
+    String getContent() {
         return content;
     }
 }

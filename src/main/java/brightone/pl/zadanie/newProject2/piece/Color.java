@@ -3,7 +3,7 @@ package brightone.pl.zadanie.newProject2.piece;
 public enum Color {
     White("b"),
     Black("c"),
-    None("-");
+    None("+-");
 
     private final String symbolColor;
 

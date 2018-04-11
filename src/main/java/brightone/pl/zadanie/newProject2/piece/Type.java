@@ -7,7 +7,7 @@ public enum Type {
     Bishop("G ", 3),
     Knight("S ", 2),
     Pawn("P ", 1),
-    Empty("--", Integer.MIN_VALUE);
+    Empty("-", Integer.MIN_VALUE);
 
     private final String symbolType;
     private final int value;

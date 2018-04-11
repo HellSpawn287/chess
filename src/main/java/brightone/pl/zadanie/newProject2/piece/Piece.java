@@ -5,10 +5,12 @@ public abstract class Piece {
     private final Color color;
     private int x;
     private int y;
+    private String symbol;
 
     Piece(Type type, Color color, int x, int y) {
         this.type = type;
         this.color = color;
+        this.symbol = type.getSymbolType() + color.getSymbolColor();
         checkingLocalisation(x, y);
     }
 
@@ -44,5 +46,9 @@ public abstract class Piece {
 
     public Type getType() {
         return type;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }
